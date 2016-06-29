@@ -117,12 +117,25 @@ ul li{
   margin: 20px;
 }
 
-footer {
-  padding: 20px;  
+.cust-modal  {
+/*   display: block;*/
+  padding-right: 0px;
+  background-color: rgba(4, 4, 4, 0.8); 
+}
+
+.cust-modal-dialog {
+  top: 20%;
+  left: 5%;
+  width: 90%;
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background: #96D5E5;
-  color: #000;
+}
+
+.cust-modal-content {
+  border-radius: 0px;
+  border: none;
+  top: 40%;
+}
+
+.cust-modal-body {
+  color: white;
 }
