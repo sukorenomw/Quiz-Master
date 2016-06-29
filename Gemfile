@@ -15,9 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'bootstrap-sass', '~> 3.3.4'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'jquery-rails'
+gem 'toastr-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
