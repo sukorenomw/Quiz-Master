@@ -8,7 +8,7 @@
       <%= render 'questions' %>
     </div>
     <div class="col-md-12 button">
-      <%= link_to '<i class="glyphicon glyphicon-plus"></i> '.html_safe, new_question_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#new_question', :class => "btn btn-primary btn-sm pull-right", }  %>
+      <%= link_to '<i class="glyphicon glyphicon-plus"></i> '.html_safe, new_question_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#new_question', :class => "btn btn-primary btn-sm pull-right", :id => 'add-question' }  %>
     </div>
   </div>
 </div>

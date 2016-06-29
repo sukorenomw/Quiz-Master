@@ -42,6 +42,7 @@ group :development, :test do
   gem 'byebug'
   gem "factory_girl_rails", "~> 4.0"
   gem "database_cleaner"
+  gem "capybara"
 end
 
 group :development do
