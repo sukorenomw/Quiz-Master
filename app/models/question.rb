@@ -4,6 +4,7 @@ class Question < ActiveRecord::Base
   
   def answer_matches?(user_answer)
     answer = self.answer.downcase
+    user_answer = user_answer.downcase
 
     answer = answer.to_i.to_words if is_number?(answer)
     user_answer = user_answer.to_i.to_words if is_number?(user_answer)
