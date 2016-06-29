@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'jquery-rails'
 gem 'toastr-rails'
+gem 'numbers_and_words'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
