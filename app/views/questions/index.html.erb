@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>
+    Choose a Question
+  </h2>
+  
+  <div class="adjust_margin">
+    <% @questions.each do |question| %>
+      <div class="row question_container">
+        <div class="col-md-8">
+          <%= link_to question.question.html_safe, question %>
+        </div>
+        <div class="col-md-4">
+          <span class="small pull-right">
+            <%= link_to "edit", edit_question_path(question) %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-md-12 button">
+      <%= link_to '<i class="glyphicon glyphicon-plus" style="font-size: 24pt;"></i> '.html_safe, new_question_path, class: "btn btn-primary btn-sm pull-right"  %>
+    </div>
+  </div>
+</div>
