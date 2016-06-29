@@ -33,7 +33,7 @@ class QuestionsController < ApplicationController
   def destroy
     @questions = Question.all
     if @question.destroy
-      flash[:notice] = "Question edited successfully."
+      flash[:notice] = "Question deleted successfully."
       render 'success'
     else
       render 'index'
