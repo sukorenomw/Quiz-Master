@@ -24,13 +24,7 @@
         </div>
       </div>
     </nav>
-    <% if flash[:notice].present? %>
-      <div class="container">
-        <div class="alert alert-info">
-          <%= flash[:notice] %>
-        </div>
-      </div>
-    <% end %>
     <%= yield %>
+
   </body>
 </html>

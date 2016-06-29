@@ -1,0 +1,13 @@
+<% @questions.each do |question| %>
+  <div class="row question_container">
+    <div class="col-md-8">
+      <%= link_to question.question.html_safe, question, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#answer'} %>
+    </div>
+    <div class="col-md-4">
+      <span class="small pull-right">
+        <%= link_to '<i class="glyphicon glyphicon-edit"></i>'.html_safe, edit_question_path(question), :class => "btn btn-xs btn-success", :remote => true, 'data-toggle' =>  "modal", 'data-target' => '#new_question' %>
+        <%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, question_path(question), method: "DELETE", data: {confirm: 'Delete question id '+question.id.to_s+' ? '}, :remote => true, :class => "btn btn-xs btn-danger" %>
+      </span>
+    </div>
+  </div>
+<% end %>
