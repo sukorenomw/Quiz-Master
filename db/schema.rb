@@ -14,6 +14,8 @@
 ActiveRecord::Schema.define(version: 20160629040233) do
 
   create_table "questions", force: :cascade do |t|
+    t.string   "question"
+    t.string   "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
