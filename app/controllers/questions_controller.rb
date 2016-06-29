@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_filter :find_question, only: [:show, :edit, :update, :destroy, :answer]
 
   def index
     @questions = Question.all
@@ -6,14 +7,6 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
-  end
-
-  def edit
-    @question = Question.find(params[:id])
-  end
-
-  def show
-    @question = Question.find(params[:id])
   end
 
   def create
@@ -28,7 +21,6 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    @question = Question.find(params[:id])
     if @question.update(question_params)
       flash[:notice] = "Question edited successfully."
       @questions = Question.all
@@ -39,7 +31,6 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    @question = Question.find(params[:id])
     @questions = Question.all
     if @question.destroy
       flash[:notice] = "Question edited successfully."
@@ -49,7 +40,17 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def answer
+    @user_answer = params[:answer][:answer]
+    @result = @question.answer_matches?(@user_answer.to_s.downcase)
+    render 'answer'
+  end
+
   private
+    def find_question
+      @question = Question.find(params[:id])
+    end
+
     def question_params
       params.require(:question).permit(:question, :answer)
     end

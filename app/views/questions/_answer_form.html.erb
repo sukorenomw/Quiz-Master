@@ -3,5 +3,14 @@
     <div class="correct_answer">
       <h1><%= @question.question.html_safe %></h1>
     </div>
-   
+    <div class="content">
+      <%= form_for :answer, url: answer_question_path(@question), remote: true do |f| %>
+        <div class="form-group">
+          <%= f.text_field :answer, class: 'form-control', placeholder: "answer" %>
+        </div>
+        <div class="content pull-right">
+          <%= f.submit "Submit answer", class: 'btn btn-default' %>
+        </div>
+      <% end %>
+    </div>
   </div>
